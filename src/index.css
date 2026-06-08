@@ -1,8 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0d0d0d;
+  background: #0a0a0a;
   color: white;
+  font-family: Arial, sans-serif;
+
+  background-image: url("https://images.unsplash.com/photo-1555066931-4365d14bab8c");
+  background-size: cover;
+  background-position: center;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  z-index: -1;
 }
 
 /* NAVBAR */
@@ -12,10 +31,10 @@ body {
   padding: 20px;
   position: sticky;
   top: 0;
+  background: rgba(10,10,10,0.7);
   backdrop-filter: blur(10px);
-  background: rgba(17, 17, 17, 0.6);
   border-bottom: 1px solid #222;
-  z-index: 10;
+
 }
 
 .navbar a {
@@ -40,8 +59,40 @@ body {
   color: #d4a300;
 }
 .hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 120px;
+  padding: 20px;
+}
+.hero-title {
+  font-size: 64px;
+  font-weight: bold;
+  color: gold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #ddd;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1 {
@@ -77,8 +128,7 @@ body {
   color: #d4a300;
 }
 .page {
-  text-align: center;
-  padding: 60px 20px;
+  padding: 80px 40px;
 }
 
 .grid {
@@ -89,17 +139,17 @@ body {
 }
 
 .card {
-  background: linear-gradient(145deg, #111, #0d0d0d);
-  border: 1px solid #222;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 215, 0, 0.15);
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 14px;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: #d4a300;
-  box-shadow: 0 10px 30px rgba(212,163,0,0.1);
+  border-color: gold;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
 }
 .whatsapp {
   position: fixed;
@@ -121,4 +171,208 @@ body {
 .fade.show {
   opacity: 1;
   transform: translateY(0);
+}
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: gold;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  background: #0a0a0a;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.buttons a {
+  padding: 10px 20px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.buttons a.outline {
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+}
+
+/* PAGE */
+.page {
+  padding: 40px;
+}
+
+.title {
+  font-size: 32px;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD (GLASS EFFECT) */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: gold;
+  transform: translateY(-5px);
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero-title {
+  font-size: 60px;
+  color: gold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: gold;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-outline {
+  border: 1px solid gold;
+  color: gold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn-primary {
+  background: gold;
+  color: black;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  border: 1px solid gold;
+  color: gold;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: gold;
+  color: black;
+}
+.page, .hero {
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
