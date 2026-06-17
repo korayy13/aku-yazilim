@@ -32,7 +32,143 @@ function Home() {
           İletişim
         </Link>
       </div>
+      {/* Hizmetler */}
+      <section className="home-section">
+        <h2>Hizmetlerimiz</h2>
+
+        <div className="grid">
+          <div className="card">
+            <h3>🌐 Web Geliştirme</h3>
+            <p>
+              Modern, hızlı ve SEO uyumlu kurumsal web siteleri geliştiriyoruz.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>📱 Mobil Uygulama</h3>
+            <p>
+              Android ve iOS için kullanıcı dostu mobil uygulamalar geliştiriyoruz.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>🎮 Oyun Geliştirme</h3>
+            <p>
+              Unity ve Unreal Engine ile oyun projeleri üretiyoruz.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Neden Biz */}
+      <section className="home-section">
+        <h2>Neden AKU YAZILIM?</h2>
+
+        <div className="grid">
+          <div className="card">
+            <h3>⚡ Hızlı Geliştirme</h3>
+            <p>Projeleri gereksiz süreçlere boğmadan hızlı ilerletiyoruz.</p>
+          </div>
+
+          <div className="card">
+            <h3>💡 Modern Teknolojiler</h3>
+            <p>React, Node.js, Unity ve güncel teknolojiler kullanıyoruz.</p>
+          </div>
+
+          <div className="card">
+            <h3>🤝 Uzun Vadeli Destek</h3>
+            <p>Proje tesliminden sonra da destek vermeye devam ediyoruz.</p>
+          </div>
+        </div>
+      </section>
+      {/* İstatistikler */}
+<section className="stats-section">
+  <div className="stat-card">
+    <h2>10+</h2>
+    <p>Tamamlanan Proje</p>
+  </div>
+
+  <div className="stat-card">
+    <h2>3+</h2>
+    <p>Farklı Platform</p>
+  </div>
+
+  <div className="stat-card">
+    <h2>100%</h2>
+    <p>Tutku ve Özveri</p>
+  </div>
+</section>
+{/* Hakkımızda */}
+<section className="about-section">
+  <div className="about-content">
+    <h2>Biz Kimiz?</h2>
+
+    <p>
+      AKU YAZILIM, modern web siteleri, mobil uygulamalar ve oyun
+      projeleri geliştirmek amacıyla kurulmuş bağımsız bir yazılım
+      stüdyosudur.
+    </p>
+
+    <p>
+      Amacımız; performanslı, kullanıcı dostu ve uzun ömürlü dijital
+      ürünler geliştirerek fikirleri gerçeğe dönüştürmektir.
+    </p>
+
+    <p>
+      Her projeye sadece bir iş olarak değil, birlikte büyüyeceğimiz
+      bir ortaklık olarak bakıyoruz.
+    </p>
+  </div>
+</section>
+{/* Çalışma Süreci */}
+<section className="process-section">
+  <h2>Nasıl Çalışıyoruz?</h2>
+
+  <div className="grid">
+    <div className="card">
+      <h3>💡 Fikir</h3>
+      <p>
+        Projenizi dinliyor, ihtiyaçlarınızı analiz ediyoruz.
+      </p>
+    </div>
+
+    <div className="card">
+      <h3>🎨 Tasarım</h3>
+      <p>
+        Modern ve kullanıcı odaklı arayüzler tasarlıyoruz.
+      </p>
+    </div>
+
+    <div className="card">
+      <h3>⚙️ Geliştirme</h3>
+      <p>
+        Güçlü ve ölçeklenebilir yazılım altyapısı oluşturuyoruz.
+      </p>
+    </div>
+
+    <div className="card">
+      <h3>🚀 Yayınlama</h3>
+      <p>
+        Projenizi yayına alıyor ve destek vermeye devam ediyoruz.
+      </p>
+    </div>
+  </div>
+  {/* Teknolojiler */}
+<section className="tech-section">
+  <h2>Kullandığımız Teknolojiler</h2>
+
+  <div className="tech-grid">
+    <div className="tech-card">React</div>
+    <div className="tech-card">Node.js</div>
+    <div className="tech-card">Firebase</div>
+    <div className="tech-card">Unity</div>
+    <div className="tech-card">Unreal Engine</div>
+    <div className="tech-card">Figma</div>
+  </div>
+</section>
+</section>
     </motion.div>
+
   );
 }
 
@@ -40,16 +176,19 @@ function Home() {
 function Projects() {
   const projects = [
     {
-      title: "Project NIGHTFALL (Unity Game)",
-      desc: "Psikolojik korku temalı PC ve mobil oyun prototipi. Atmosfer odaklı deneyim üzerine geliştirilmiştir."
+      title: "Project NIGHTFALL",
+      desc: "Psikolojik korku oyunu.",
+      img: "https://images.unsplash.com/photo-1604079628040-94301bb21b91"
     },
     {
-      title: "AKU Corporate Web System",
-      desc: "SEO uyumlu, hızlı ve modern kurumsal web site altyapısı."
+      title: "Corporate Website",
+      desc: "Kurumsal modern web sitesi.",
+      img: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d"
     },
     {
-      title: "Mobile Service App",
-      desc: "Kullanıcı odaklı işlem yönetimi sağlayan React Native tabanlı mobil uygulama."
+      title: "Mobile App",
+      desc: "React Native uygulama.",
+      img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c"
     }
   ];
 
@@ -57,19 +196,10 @@ function Projects() {
     <div className="page">
       <h1 className="title">Projeler</h1>
 
-      <p style={{ marginBottom: "20px", opacity: 0.8 }}>
-        Geliştirdiğimiz projeler, gerçek kullanım senaryoları için
-        tasarlanmış modern yazılım çözümleridir.
-      </p>
-
       <div className="grid">
         {projects.map((p, i) => (
-          <motion.div
-            key={i}
-            className="card"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
+          <motion.div key={i} className="card">
+            <img src={p.img} alt="" className="project-img" />
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
           </motion.div>
@@ -134,6 +264,23 @@ export default function App() {
         <Route path="/hizmetler" element={<Services />} />
         <Route path="/iletisim" element={<Contact />} />
       </Routes>
+      <footer className="footer">
+  <h3>AKU YAZILIM</h3>
+
+  <p>
+    Modern web, mobil uygulama ve oyun geliştirme çözümleri üretiyoruz.
+  </p>
+
+  <div className="footer-links">
+    <a href="#">Instagram</a>
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+  </div>
+
+  <small>
+    © 2024 AKU YAZILIM - Tüm Hakları Saklıdır.
+  </small>
+</footer>
 
       <a
         href="https://wa.me/905401500313"
